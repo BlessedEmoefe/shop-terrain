@@ -1,11 +1,11 @@
-import React,{ Component} from "react"
+import React ,{ Component} from "react"
 
 class ShopPage extends Component{
     state={
 
     };
 
-    render{
+    render(){
         return(
 
         )
