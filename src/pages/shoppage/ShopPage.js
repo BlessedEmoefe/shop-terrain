@@ -4,13 +4,17 @@ import CollectionPreview from "../../components/collection-preview/collection-pr
 
 class ShopPage extends Component{
     state={
-    collection:ShopData
+    collections:ShopData
     };
 
 render(){
+    const { collections } = this.state
         return(
             <div>
-                <CollectionPreview title={this.state.collection.title}/>
+                {
+collections.map(({id,...othercollectionitems})=><CollectionPreview key={id} {...othercollectionitems}/>)
+                }
+                
             </div>
         )
     }
