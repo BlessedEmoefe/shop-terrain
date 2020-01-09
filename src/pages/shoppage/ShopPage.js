@@ -1,6 +1,6 @@
 import React ,{ Component} from "react"
 import ShopData from "./ShopData"
-import CollectionPreview from "../../components/collection-preview"
+import CollectionPreview from "../../components/collection-preview/collection-preview"
 
 class ShopPage extends Component{
     state={
@@ -10,7 +10,7 @@ class ShopPage extends Component{
 render(){
         return(
             <div>
-                <CollectionPreview title={this.state.collection.}/>
+                <CollectionPreview title={this.state.collection.title}/>
             </div>
         )
     }
