@@ -1,9 +1,9 @@
 import React from "react"
 import "./collection-preview.styles.scss"
 
-const CollectionPreview = () =>(
+const CollectionPreview = ({title}) =>(
 <div className="collection-preview">
-<h1 className="title">Title</h1>
+<h1 className="title">{title}</h1>
 <div className="preview">
 
 </div>
