@@ -7,6 +7,6 @@ const CollectionPreview = ({title,item}) =>(
 <div className="preview">
 {item.map((item)=><div>{item.name}</div>)}
 </div>
-</div>
+</div>yyy
 )
 export default CollectionPreview;
