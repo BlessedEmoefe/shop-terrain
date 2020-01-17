@@ -11,11 +11,9 @@ render(){
     const { collections } = this.state
         return(
             <div>
-                
                 {
 collections.map(({id,...othercollectionitems})=><CollectionPreview key={id} {...othercollectionitems}/>)
                 }
-                
             </div>
         )
     }
