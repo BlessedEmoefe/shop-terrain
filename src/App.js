@@ -4,6 +4,8 @@ import Homepage from './pages/Homepage/Hompage';
 import { Route,Link } from "react-router-dom"
 import ShopPage from "./pages/shoppage/ShopPage";
 import Hats from './pages/HatsPage/Hats';
+import Header from "./components/header/Header"
+
 
 const Hatspage=()=>{
 return(
@@ -16,6 +18,7 @@ return(
 function App() {
   return (
     <div>
+      <Header />
       <switch>
 
       <Route path="/" exact component={Homepage} />
