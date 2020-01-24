@@ -5,7 +5,7 @@ import { Route,Link } from "react-router-dom"
 import ShopPage from "./pages/shoppage/ShopPage";
 import Hats from './pages/HatsPage/Hats';
 import Header from "./components/header/Header"
-
+import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up"
 
 const Hatspage=()=>{
 return(
@@ -20,10 +20,10 @@ function App() {
     <div>
       <Header />
       <switch>
-
       <Route path="/" exact component={Homepage} />
       <Route path="/hats" component={Hats} />
       <Route path="/shop" component={ShopPage} />
+      <Route path="/signin" component={SignInAndSignUpPage} />
       </switch>
     </div>
   );
