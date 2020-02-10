@@ -10,25 +10,25 @@ import { auth } from "./firebase/Firebase.utils";
 
 class App extends Component {
   state = {
-    currentUser: null
+    currrentUser: null
   };
 
-  unsubscribeFromAuth = null;
+  unsubscribeFromAuth = () => null;
 
   componentDidMount() {
     this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-      this.setState({ currentUser: user });
+      this.setState({ currrentUser: user });
       console.log(user);
     });
   }
+
   componentWillUnmount() {
     this.unsubscribeFromAuth();
   }
-
   render() {
     return (
       <div>
-        <Header />
+        <Header currentUser={this.state.currrentUser} />
         <Switch>
           <Route path="/" exact component={Homepage} />
           <Route path="/shop" component={ShopPage} />
