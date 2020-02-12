@@ -6,7 +6,11 @@ import ShopPage from "./pages/shoppage/ShopPage";
 import Hats from "./pages/HatsPage/Hats";
 import Header from "./components/header/Header";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up";
-import { auth } from "./firebase/Firebase.utils";
+import {
+  auth,
+  // firestore,
+  createUserProfileDocument
+} from "./firebase/Firebase.utils";
 
 class App extends Component {
   state = {
@@ -16,9 +20,10 @@ class App extends Component {
   unsubscribeFromAuth = () => null;
 
   componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-      this.setState({ currrentUser: user });
-      console.log(user);
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async user => {
+      // this.setState({ currrentUser: user });
+      createUserProfileDocument(user);
+      // console.log(user);
     });
   }
 
