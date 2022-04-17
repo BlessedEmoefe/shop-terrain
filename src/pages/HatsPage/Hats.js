@@ -7,6 +7,7 @@ const Hats = () => (
     <p>Hello this is the hats page</p>
     <p>Hello this is the hats page</p>
     <p>Hello this is the hats page</p>
+    <p>Hello this is the hats page</p>
   </div>
 );
 export default Hats;
