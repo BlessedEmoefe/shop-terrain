@@ -5,6 +5,7 @@ const Hats = () => (
     hello this is the hatspage
     <p>Hello this is the hats page</p>
     <p>Hello this is the hats page</p>
+    <p>Hello this is the hats page</p>
   </div>
 );
 export default Hats;
